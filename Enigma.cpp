@@ -57,6 +57,22 @@ string encrypt(string s){
 
 	string standard = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	string reflector = "EJMZALYXVBWFCRQUONTSPIKHGD";
+	
+	//initialize the rotor positions
+	while(r1[0] != a){
+		r1 = rotate(r1);
+		c1 = rotate(c1);
+	}
+
+	while(r2[0] != b){
+		r2 = rotate(r2);
+		c2 = rotate(c2);
+	}
+
+	while(r3[0] != c){
+		r3 = rotate(r3);
+		c3 = rotate(c3);
+	}
 
 	for (int i = 0; i < getSize(s); i++){
 		next = s[i];
@@ -118,8 +134,8 @@ string encrypt(string s){
 int main() {
 
 	string message = "Hello World";
-	string encryption = encrypt(message);
+	string encryption = encrypt(message,'A','B','C');
 	cout << encryption << endl;
-	cout << encrypt(encryption) << endl;
+	cout << encrypt(encryption,'A','B','C') << endl;
 	return 0;
 }
