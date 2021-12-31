@@ -1,2 +1,1 @@
-Hey Everyone! This is a little Enigma Machine I coded in C++ for fun. There's still a little functionality I'd love to add, perhaps a function to set the initial rotor positions
-or swap the rotors, but it has the main encryption features.
+Hey Everyone! This is a little Enigma Machine I coded in C++ for fun. There's still a little functionality I'd love to add but it has the main encryption features.
